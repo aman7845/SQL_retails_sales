@@ -24,7 +24,7 @@ This project is designed to demonstrate SQL skills and techniques typically used
 ```sql
 
 
-CREATE TABLE retails_sales
+create table retails_sales
 (
     transactions_id INT PRIMARY KEY,
     sale_date DATE,	
@@ -102,7 +102,7 @@ GROUP BY 1
 4. **Write a SQL query to find the average age of customers who purchased items from the 'Beauty' category.**:
 ```sql
 SELECT
-    ROUND(AVG(age), 2) as avg_age
+    ROUND(AVG(age), 2) as average_age_of_beauty_customer
 FROM retails_sales
 WHERE category = 'Beauty'
 ```
@@ -161,7 +161,7 @@ LIMIT 5
 ```sql
 SELECT 
     category,    
-    COUNT(DISTINCT customer_id) as cnt_unique_cs
+    COUNT(DISTINCT customer_id) as unique_count
 FROM retails_sales
 GROUP BY category
 ```
